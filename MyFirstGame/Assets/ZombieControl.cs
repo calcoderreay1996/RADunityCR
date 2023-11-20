@@ -14,6 +14,8 @@ public class ZombieControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // Move zombie left and right automatically
         transform.Translate(dir * Time.deltaTime);
 
         if (transform.position.x <= -4)
