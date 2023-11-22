@@ -14,17 +14,27 @@ public class ZombieControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.UpArrow))
+            transform.position += (new Vector3(0, 1, 2)) * Time.deltaTime;
+        if (Input.GetKey(KeyCode.W))
+            transform.position += (new Vector3(0, 1, 2)) * Time.deltaTime;
 
-        // Move zombie left and right automatically
         transform.Translate(dir * Time.deltaTime);
 
-        if (transform.position.x <= -4)
+        if (transform.position.y <= 0)
         {
-            dir = Vector3.right;
+            dir = Vector3.up;
         }
-        else if (transform.position.x >= 4)
+        else if (transform.position.y >= 4)
         {
-            dir = Vector3.left;
+            dir = Vector3.down;
         }
+
+
+       
     }
+
+
+
+
 }

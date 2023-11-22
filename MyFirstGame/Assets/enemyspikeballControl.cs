@@ -5,10 +5,12 @@ using UnityEngine;
 public class enemyspikeballControl : MonoBehaviour
 {
     private Vector3 dir = Vector3.up;
+    private object enemyspikeKill;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,7 +31,11 @@ public class enemyspikeballControl : MonoBehaviour
         {
             dir = Vector3.down;
         }
+        {
+            transform.position += *enemyspikeKill ,
+        }
+        }
 
     }
+    
 
-}
